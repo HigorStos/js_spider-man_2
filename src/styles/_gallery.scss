@@ -1,0 +1,49 @@
+@use 'variaveis';
+
+.gallery {
+    background-color: variaveis.$corDeFundo;
+    padding: 2.8vw 9.6vw 5.6vw;
+
+    @media (max-width: 768px) {
+        padding-bottom: 11.2vw;
+    }
+
+    .button {
+        display: flex;
+        margin: 16px auto 0px;
+
+        @media (max-width: 1023px) {
+            margin: 16px auto;
+        }
+
+        @media (max-width: 768px) {
+            margin-top: 0;
+        }
+
+        &--is-hidden {
+            display: none;
+        }
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        padding-bottom: 32px;
+        transition: all 0.5s ease;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        &__item {
+            img {
+                max-width: 100%;
+            }
+        }
+
+        &--is-hidden {
+            display: none;
+        }
+    }
+}

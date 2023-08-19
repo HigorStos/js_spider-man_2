@@ -1,0 +1,55 @@
+@use 'variaveis';
+
+.footer {
+    padding-bottom: 5.6vw;
+    background-color: variaveis.$corDeFundo;
+    max-width: 100vw;
+
+    &__list {
+        background-image: url(../../src/images/footer/footer-background.jpg);
+        background-size: cover;
+        padding: 32px 64px;
+        max-width: 100vw;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+        list-style: none;
+
+        @media (max-width: 1023px) {
+            padding: 5.6vw;
+        }
+
+        @media (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &__item {
+            padding-right: 1vw;
+
+            @media (max-width: 1023px) {
+                img {
+                    max-width: 22vw;
+                }
+            }
+        }
+    }
+
+    &__branding {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        img {
+            padding-top: 96px;
+            padding-bottom: 16px;
+
+            @media (max-width: 768px) {
+                padding-top: 32px;
+            }
+        }
+    }
+}

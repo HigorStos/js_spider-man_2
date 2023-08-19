@@ -1,0 +1,70 @@
+@use 'variaveis';
+
+.others-games {
+    padding: 5.6vw;
+    background-image: url(../../dist/images/others-games/others_background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .button {
+        color: variaveis.$corDeFundo;
+        background-color: variaveis.$corTituloPrincipal;
+        padding: 8px 32px;
+        font-size: 18px;
+
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+    }
+
+    .title_section {
+        text-transform: uppercase;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+        }
+
+        h2 {
+            font-weight: 500;
+            padding: 24px 0;
+
+            @media (max-width: 768px) {
+                padding-bottom: 12px;
+            }
+        }
+
+        &__item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 8px;
+
+            @media (max-width: 768px) {
+                text-align: center;
+            }
+
+            img {
+                width: 100%;
+                object-fit: cover;
+                border-radius: 24px;
+                margin-bottom: 24px;
+                transition: all 0.4s;
+
+                @media (max-width: 768px) {
+                    border-radius: 12px;
+                    margin-bottom: 0;
+                }
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+}

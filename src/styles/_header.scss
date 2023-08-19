@@ -1,0 +1,54 @@
+@use 'variaveis';
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: variaveis.$corTituloPrincipal;
+    z-index: 1;
+
+    @media (max-width: 768px) {
+        position: sticky;
+        top: 0;
+        left: 0;
+        background-color: variaveis.$corTituloPrincipal;
+        z-index: 1;
+    }
+
+    &__container {
+        padding: 0.8vw 9.6vw;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: 768px) {
+            padding: 0.8vw 3.2vw;
+        }
+    }
+
+    &__logo {
+        margin: 0;
+        max-width: 176px;
+
+        @media (max-width: 768px) {
+            max-width: 108px;
+        }
+    }
+
+    &__buttons {
+        @media (max-width: 768px) {
+            display: flex;
+        }
+    }
+
+    .button {
+        background-color: variaveis.$corTextoSecundario;
+        padding: 8px 16px;
+        margin-left: 8px;
+
+        @media (max-width: 768px) {
+            padding: 8px;
+            font-size: 12px;
+        }
+    }
+}

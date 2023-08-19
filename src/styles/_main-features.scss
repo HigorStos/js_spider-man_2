@@ -1,0 +1,51 @@
+@use 'variaveis';
+
+.main-features {
+    padding: 2.8vw 9.6vw 5.6vw;
+    background-color: variaveis.$corDeFundo;
+
+    @media (max-width: 768px) {
+        padding: 5.6vw;
+    }
+
+    &__list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 32px;
+        row-gap: 56px;
+
+        @media (max-width: 768px) {
+            grid-template-columns: 1fr;
+            row-gap: 8px;
+        }
+
+        &__item {
+            padding: 12px;
+
+            h2 {
+                font-weight: 500;
+            }
+        
+            p {
+                color: variaveis.$corTituloPrincipal;
+                margin-top: 16px;
+            }
+
+            img {
+                max-width: 100%;
+                object-fit: cover;
+                border-radius: 24px;
+                margin-bottom: 24px;
+                transition: all 0.4s;
+
+                @media (max-width: 768px) {
+                    border-radius: 12px;
+                }
+
+                &:hover {
+                    transform: scale(1.03);
+                }
+            }
+        }
+    }
+}

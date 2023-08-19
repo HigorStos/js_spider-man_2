@@ -1,0 +1,93 @@
+@use 'variaveis';
+
+.faq {
+    padding: 5.6vw;
+    background-color: variaveis.$corDeFundo;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 768px) {
+        display: block;
+    }
+
+    &__image {
+        padding-right: 10vw;
+
+        @media (max-width: 768px) {
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        img {
+            width: 30vw;
+
+            @media (max-width: 768px) {
+                width: 90%;
+            }
+        }
+    }
+
+    &__questions {
+        width: 75vw;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+
+        &__item {
+            &__question {
+                margin: 0;
+                padding: 16px;
+                position: relative;
+                cursor: pointer;
+
+                &.text {
+                    margin: 0;
+                    font-weight: 500;
+                    font-size: 20px;
+
+                    @media (max-width: 768px) {
+                        font-size: 18px;
+                    }
+                }
+
+                &::after {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 32px;
+                }
+            }
+
+            &__answer {
+                height: 0;
+                overflow: hidden;
+                padding: 0 24px;
+                transition: height, 0.35s linear;
+            }
+            
+            &--is-open {
+                .faq__questions__item__question::after {
+                    content: '–';
+                }
+
+                .faq__questions__item__answer {
+                    height: auto;
+                    padding: 16px;
+                    transition: height, 0.35s linear;
+                    border-top: 1px solid #363636;
+                    border-bottom: 1px solid #363636;
+                }
+            }
+
+            .gray {
+                background-color: #363636;
+            }
+        }
+    }
+}
