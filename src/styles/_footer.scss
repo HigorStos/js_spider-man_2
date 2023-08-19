@@ -22,6 +22,7 @@
         }
 
         @media (max-width: 768px) {
+            padding: 11.2vw 5.6vw;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -33,6 +34,12 @@
             @media (max-width: 1023px) {
                 img {
                     max-width: 22vw;
+                }
+            }
+
+            @media (max-width: 768px) {
+                img {
+                    max-width: 56vw;
                 }
             }
         }
@@ -47,9 +54,18 @@
             padding-top: 96px;
             padding-bottom: 16px;
 
+            @media (max-width: 1023px) {
+
+            }
+
             @media (max-width: 768px) {
+                max-width: 24vw;
                 padding-top: 32px;
             }
+        }
+
+        h2 {
+            margin: 0;
         }
     }
 }
