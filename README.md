@@ -13,8 +13,8 @@
 Projeto próprio, onde consegui aplicar os conhecimentos adquirido durante o módulo para criação de uma landing page do game Spider-Man 2. Utilizado como projeto de conclusão de módulo na EBAC - Escola Britânica de Artes Criativas e Tecnologia.
 
 ## 🚀 Tecnologias
-- Sass
 - JavaScript
+- Sass
 - Gulp
 - HTML
 - CSS
